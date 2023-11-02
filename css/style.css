@@ -53,6 +53,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 20px
 }
 
 .logo {
@@ -80,6 +81,11 @@ header {
 
 .cart.active {
   right: 0;
+}
+
+.cart-content {
+  height: 100%;
+  overflow: auto ; 
 }
 
 .cart-title {
@@ -184,6 +190,9 @@ header {
 
 .shop {
   margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Shop Content */
