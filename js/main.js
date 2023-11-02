@@ -66,9 +66,21 @@ function ready() {
 
 // remove Item from Cart
 function removeCartItem(e) {
+  if (cart.children[1].children.length === 0) {
+    total = 0
+  }
+
+  if (cart.children[1].children.length >= 4) {
+    cart.children[1].style.height = '60vh'
+  } else {
+    cart.children[1].style.height = 'fit-content'
+  }
   let parentButton = e.target.parentElement
   parentButton.remove()
   updateTotal()
+  if (cart.children[1].children.length === 0) {
+    total = 0;
+  }
   for (let i = 0; i < dataPro.length; i++) {
     let title = parentButton.children[1].children[0].innerHTML
     dataPro.splice(dataPro.indexOf(title), 1)
@@ -145,7 +157,18 @@ function showData() {
 }
 showData()
 
+if (cart.children[1].children.length >= 4) {
+  cart.children[1].style.height = '60vh'
+} else {
+  cart.children[1].style.height = 'fit-content'
+}
+
 function addProductToCart(title, price, img) {
+  if (cart.children[1].children.length >= 4) {
+    cart.children[1].style.height = '60vh'
+  } else {
+    cart.children[1].style.height = 'fit-content'
+  }
   let cartShopBox = document.createElement('div')
 
   let have = false;
@@ -157,8 +180,8 @@ function addProductToCart(title, price, img) {
       have = false
     }
   }
-  
-  if(have) {
+
+  if (have) {
     alert('you have it')
   }
   else {
@@ -189,7 +212,7 @@ function addProductToCart(title, price, img) {
     cartShopBox.getElementsByClassName('cart-remove')[0].addEventListener('click', removeCartItem)
     cartShopBox.getElementsByClassName('cart-quantity')[0].addEventListener('input', quantityChanged)
   }
-  
+
 }
 
 // Update Total 
@@ -204,7 +227,7 @@ function updateTotal() {
     let price = parseFloat(priceElement.innerText.replace('$', ""))
     let quantity = quantityElement.value
     total = total + (price * quantity);
-
+    
     total = Math.round(total * 100) / 100;
 
     document.getElementsByClassName('total-price')[0].innerText = `$${total}`

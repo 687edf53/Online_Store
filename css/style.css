@@ -68,7 +68,7 @@ header {
 
 /* Cart */
 .cart {
-  position: fixed;
+  position:  absolute;
   top: 0;
   right: -100%;
   width: 360px;
@@ -84,8 +84,7 @@ header {
 }
 
 .cart-content {
-  height: 100%;
-  overflow: auto ; 
+  overflow-y: auto;
 }
 
 .cart-title {
