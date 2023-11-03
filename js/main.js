@@ -135,7 +135,8 @@ function showData() {
      <div class="detail-box">
      <div class="cart-product-title">${dataPro[i].title}</div>
      <div class="cart-price">${dataPro[i].price}</div>
-     <input type="number" value="${dataPro[i].input}" min="1" class="cart-quantity">
+     <input type="number" value="${+dataPro[i]
+       .input}" min="1" class="cart-quantity">
      </div>
      <!-- Remove Cart -->
      <i class="bx bxs-trash-alt cart-remove"></i>
@@ -220,7 +221,6 @@ function addProductToCart(title, price, img) {
   // Append the new cart item to the cart content
   cartContent.appendChild(cartShopBox);
 }
-
 
 // Update Total
 function updateTotal() {
