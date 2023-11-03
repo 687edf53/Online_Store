@@ -67,11 +67,6 @@ function removeCartItem(e) {
     total = 0;
   }
 
-  if (cart.children[1].children.length >= 4) {
-    cart.children[1].style.height = "60vh";
-  } else {
-    cart.children[1].style.height = "fit-content";
-  }
   let parentButton = e.target.parentElement;
   parentButton.remove();
   updateTotal();
@@ -91,7 +86,7 @@ function removeCartItem(e) {
 function quantityChanged(e) {
   let input = e.target;
   let title = e.target.parentElement.children[0].innerHTML;
-
+  
   if (isNaN(input.value) || input.value <= 0) {
     input.value = 1;
   }
@@ -101,8 +96,8 @@ function quantityChanged(e) {
       localStorage.products = JSON.stringify(dataPro);
     }
   }
-
   updateTotal();
+
 }
 
 // add To Cart
@@ -149,9 +144,9 @@ function showData() {
   for (let i = 0; i < cartContent.children.length; i++) {
     cartContent.children[i]
       .getElementsByClassName("cart-remove")[0]
-      .addEventListener("click", removeCartItem);
-    cartContent
-      .getElementsByClassName("cart-quantity")[0]
+      .addEventListener("click", removeCartItem)
+      cartContent
+      .getElementsByClassName("cart-quantity")[i]
       .addEventListener("input", quantityChanged);
   }
 }
