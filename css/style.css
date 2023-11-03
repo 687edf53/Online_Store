@@ -68,7 +68,7 @@ header {
 
 /* Cart */
 .cart {
-  position:  absolute;
+  position: absolute;
   top: 0;
   right: -100%;
   width: 360px;
