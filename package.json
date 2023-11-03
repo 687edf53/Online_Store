@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "simple online store webiste",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/687edf53/Online_Store.git"
@@ -16,5 +14,5 @@
   "bugs": {
     "url": "https://github.com/687edf53/Online_Store/issues"
   },
-  "homepage": "https://github.com/687edf53/Online_Store#readme"
+  "homepage": "https://687edf53.github.io/Online_Store"
 }
