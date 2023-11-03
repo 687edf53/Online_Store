@@ -12,11 +12,9 @@
   padding: 0;
   list-style: none;
   scroll-padding-top: 2rem;
-  /* for make a padding top of scroll place 2rem = 32px */
   text-decoration: none;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  /* for make a scroll move smooth */
   font-family: 'Poppins', sans-serif;
 }
 
@@ -35,7 +33,6 @@ body {
 
 section {
   padding: 4rem 0 3rem;
-  /* 4rem = 64px 3rem = 48px */
 }
 
 header {
@@ -186,7 +183,6 @@ header {
   margin-bottom: 1.5rem;
 }
 
-
 .shop {
   margin-top: 3rem;
   display: flex;
@@ -198,9 +194,6 @@ header {
 .shop-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, auto));
-  /* repeat(auto-fit , minmax(220px,auto)   
-  auto-fit: for make a columns auto by screen width 
-  minmax:   auto resize element but not smaller than 220px */
   gap: 1.5rem;
 }
 
@@ -222,7 +215,6 @@ header {
 
 .product-title {
   font-size: 1.1rem;
-  /* 1.1rem = 17.6   equation: 16px * 1.1 */
   font-weight: var(--font-bold);
   text-transform: uppercase;
   margin-bottom: 0.5rem;

@@ -7,8 +7,6 @@ let shopContent = document.querySelector(".shop-content");
 let shopTitle = document.querySelector(".section-title");
 // Open Cart
 
-let input_global = 1;
-
 let distance =
   window.innerWidth - (shopContainer.offsetWidth + cart.offsetWidth);
 cartIcon.addEventListener("click", () => {
