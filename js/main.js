@@ -86,6 +86,7 @@ function removeCartItem(e) {
     localStorage.products = JSON.stringify(dataPro);
   }
   updateTotal();
+  cartHeight()
 }
 
 // Quantity Changes
@@ -220,7 +221,18 @@ function addProductToCart(title, price, img) {
 
   // Append the new cart item to the cart content
   cartContent.appendChild(cartShopBox);
+  cartHeight()
 }
+
+function cartHeight {
+  if (cart.children[1].children.length >= 4) {
+  cart.style.height = "60vh";
+  } else {
+    cart.style.height = "fit-content";
+  }
+}
+
+cartHeight()
 
 // Update Total
 function updateTotal() {
